@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Funny_letters.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/zhiraf" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:id="@+id/play_btn"
+            android:layout_width="176dp"
+            android:layout_height="163dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/yellow_shape_btn"
+            android:scaleType="fitCenter"
+            android:text="Играть"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/alphabet_btn"
+            android:layout_width="134dp"
+            android:layout_height="136dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="67dp"
+            android:background="@drawable/yellow_shape_btn"
+            android:scaleType="fitCenter"
+            android:text="Алфавит" />
+
+        <Button
+            android:id="@+id/rate_btn"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/yellow_shape_btn"
+            android:scaleType="fitCenter"
+            android:text="Оценить" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
