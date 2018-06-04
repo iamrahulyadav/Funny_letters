@@ -42,7 +42,6 @@ public class Main2Activity extends MusicActivity {
                 Toast.makeText(getApplicationContext(), "Вы нажали БУКВУ!!!", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
 //    public void onClickLetter(View view) {
