@@ -18,7 +18,7 @@
         </activity>
         <activity android:name="com.example.Funny_letters.Main2Activity" />
         <activity android:name="com.example.Funny_letters.Main3Activity" />
-        <activity android:name="com.example.Funny_letters.MusicActivity"></activity>
+        <activity android:name="com.example.Funny_letters.BaseActivity"/>
     </application>
 
 </manifest>
