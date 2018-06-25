@@ -24,10 +24,10 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-       MusicManager.getInstance().stopPlay();
+        MusicManager.getInstance().stopPlay();
         super.onStop();
         counter -= 1;
-        if (counter == 0){
+        if (counter == 0) {
             MusicManager.getInstance().stopPlay();
         }
     }

@@ -10,7 +10,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/viewpager"
-        android:foregroundGravity="center_vertical">
-    </android.support.v4.view.ViewPager>
+        android:foregroundGravity="center_vertical"></android.support.v4.view.ViewPager>
 
-    </RelativeLayout>
+</RelativeLayout>

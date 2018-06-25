@@ -13,6 +13,7 @@ public class Main3Activity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
     }
+
     @Override
     protected void onStart() {
         super.onStart();

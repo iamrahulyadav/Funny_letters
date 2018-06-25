@@ -15,7 +15,7 @@ public class MusicManager {
     private AudioManager audioManager;
     private static MusicManager instance;
 
-        public static MusicManager getInstance() {
+    public static MusicManager getInstance() {
         if (instance == null) {
             instance = new MusicManager();
         }
@@ -26,15 +26,15 @@ public class MusicManager {
     }
 
     public void startPlay(Context context) {
-     //  if (audioManager == null && mediaPlayer == null) {
-            audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+        //  if (audioManager == null && mediaPlayer == null) {
+        audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
 
-            mediaPlayer = MediaPlayer.create(context, R.raw.music);
-            mediaPlayer.start();
-            mediaPlayer.setLooping(true);
-            audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 6, 0);
-        }
-  //  }
+        mediaPlayer = MediaPlayer.create(context, R.raw.music);
+        mediaPlayer.start();
+        mediaPlayer.setLooping(true);
+        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 6, 0);
+    }
+    //  }
 
     public void stopPlay() {
         mediaPlayer.stop();

@@ -35,6 +35,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.lettersview);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
+
         pagerAdapterLet = new PagerAdapterLet(this);
         viewPager.setAdapter(pagerAdapterLet);
 
@@ -42,16 +43,17 @@ public class Main2Activity extends AppCompatActivity {
         btnRight = (Button) findViewById(R.id.btnRight);
 
         //letter1 = (ImageView) findViewById(R.id.letter1);
-        //touch_btn = (Button) findViewById(R.id.touch_btn);
+        btnRight = (Button) findViewById(R.id.btnRight);
 
 //        final Animation animScaleTouch = AnimationUtils.loadAnimation(this, R.anim.myalpha);
-//        touch_btn.setAnimation(animScaleTouch);
-//        touch_btn.setOnClickListener(new Button.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                view.startAnimation(animScaleTouch);
-//            }
-//        });
+//            btnRight.setAnimation(animScaleTouch);
+//            btnRight.setOnClickListener(new Button.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    view.startAnimation(animScaleTouch);
+//                }
+//            });
+
 //
 //        final Animation animScaleLetter = AnimationUtils.loadAnimation(this, R.anim.mycombo);
 //        letter1.setAnimation(animScaleLetter);
@@ -62,29 +64,14 @@ public class Main2Activity extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(), "Вы нажали БУКВУ!!!", Toast.LENGTH_SHORT).show();
 //            }
 //        });
+    }
 
+    public void MoveNext(View view) {
+        viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+    }
 
-        // For scrolling to next item
-        if (btnRight != null) {
-            btnRight.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    viewPager.setCurrentItem(getNextPossibleItemIndex(1), true);
-                }
-
-                private int getNextPossibleItemIndex(int change) {
-
-                    int currentIndex = viewPager.getCurrentItem();
-                    int total = viewPager.getAdapter().getCount();
-
-                    if (currentIndex + change < 0) {
-                        return 0;
-                    }
-
-                    return Math.abs((currentIndex + change) % total);
-                }
-            });
-        }
+    public void MovePrevious(View view) {
+        viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
     }
 
     @Override

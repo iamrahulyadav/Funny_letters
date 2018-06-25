@@ -32,5 +32,5 @@
         android:text="Алфавит"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="30sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 </RelativeLayout>
