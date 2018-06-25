@@ -1,5 +1,6 @@
 package com.example.Funny_letters;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import com.example.igortaran.R;
@@ -12,6 +13,8 @@ public class Main3Activity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
     @Override

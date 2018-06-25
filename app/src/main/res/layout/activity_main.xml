@@ -46,15 +46,15 @@
 
         <Button
             android:id="@+id/rate_btn"
-            android:layout_width="95dp"
-            android:layout_height="95dp"
+            android:layout_width="108dp"
+            android:layout_height="98dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:background="@drawable/yellow_shape_btn"
             android:scaleType="fitCenter"
-            android:text="Оценить"
+            android:text="Оценить  "
             android:textAlignment="center"
-            android:textSize="13sp" />
+            android:textSize="14sp" />
 
     </RelativeLayout>
 

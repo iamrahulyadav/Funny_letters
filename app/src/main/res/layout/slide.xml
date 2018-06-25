@@ -22,8 +22,9 @@
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="50sp"
-        android:textStyle="bold" />
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:typeface="serif" />
 
 
     <ImageView
@@ -42,7 +43,6 @@
         android:layout_height="132dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="0dp"
         android:background="@drawable/arrow_left"
         android:onClick="MovePrevious" />
 

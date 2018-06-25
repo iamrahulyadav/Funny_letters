@@ -2,6 +2,7 @@ package com.example.Funny_letters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -22,8 +23,6 @@ import java.util.Vector;
 
 public class Main2Activity extends AppCompatActivity {
 
-    //    Button touch_btn;
-//    ImageView letter1;
     private boolean isNeedStopMusic = true;
     private ViewPager viewPager;
     private PagerAdapterLet pagerAdapterLet;
@@ -33,6 +32,8 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lettersview);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
 
