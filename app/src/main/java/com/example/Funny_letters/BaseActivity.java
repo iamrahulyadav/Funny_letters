@@ -1,7 +1,6 @@
 package com.example.Funny_letters;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.igortaran.R;
@@ -13,7 +12,6 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
-
     }
 
     @Override

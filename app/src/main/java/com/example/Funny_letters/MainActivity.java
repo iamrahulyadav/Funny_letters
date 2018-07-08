@@ -12,10 +12,10 @@ import android.widget.Button;
 import com.example.igortaran.R;
 
 public class MainActivity extends BaseActivity {
-
-    Button play_btn, alphabet_btn, rate_btn;
+    private Button play_btn;
+    private Button alphabet_btn;
+    private Button rate_btn;
     private boolean isNeedStopMusic = true;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,18 +23,14 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
         initView();
 
         final Animation animScalePlay = AnimationUtils.loadAnimation(this, R.anim.mycombo);
         play_btn.setAnimation(animScalePlay);
-        play_btn.setOnClickListener(new Button.OnClickListener()
-
-        {
+        play_btn.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
                 view.startAnimation(animScalePlay);
-
                 Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
                 isNeedStopMusic = false;
                 startActivity(intent);
@@ -43,13 +39,10 @@ public class MainActivity extends BaseActivity {
 
         final Animation animScaleAlphabet = AnimationUtils.loadAnimation(this, R.anim.mycombo);
         alphabet_btn.setAnimation(animScaleAlphabet);
-        alphabet_btn.setOnClickListener(new Button.OnClickListener()
-
-        {
+        alphabet_btn.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
                 view.startAnimation(animScaleAlphabet);
-
                 Intent intent = new Intent(getApplicationContext(), Main3Activity.class);
                 isNeedStopMusic = false;
                 startActivity(intent);
@@ -64,20 +57,18 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 view.startAnimation(animScaleRate);
-
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("market://details?id=com.example.android"));
                 isNeedStopMusic = false;
                 startActivity(intent);
             }
         });
-
     }
 
     private void initView() {
-        play_btn = (Button) findViewById(R.id.play_btn);
-        alphabet_btn = (Button) findViewById(R.id.alphabet_btn);
-        rate_btn = (Button) findViewById(R.id.rate_btn);
+        play_btn = findViewById(R.id.play_btn);
+        alphabet_btn = findViewById(R.id.alphabet_btn);
+        rate_btn = findViewById(R.id.rate_btn);
     }
 
     @Override

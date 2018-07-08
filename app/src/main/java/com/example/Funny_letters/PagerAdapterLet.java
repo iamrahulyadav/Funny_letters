@@ -1,7 +1,6 @@
 package com.example.Funny_letters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -14,11 +13,9 @@ import android.widget.TextView;
 import com.example.igortaran.R;
 
 public class PagerAdapterLet extends PagerAdapter {
-
-    private LayoutInflater inflater;
     private Context context;
 
-    public int[] list_letter = {
+    private int[] list_letter = {
             R.drawable.letter_a,
             R.drawable.letter_b,
             R.drawable.letter_v,
@@ -54,7 +51,7 @@ public class PagerAdapterLet extends PagerAdapter {
             R.drawable.letter_ja,
     };
 
-    public String[] list_title = {
+    private String[] list_title = {
             "Арбуз",
             "Банан",
             "Вертолет",
@@ -90,7 +87,7 @@ public class PagerAdapterLet extends PagerAdapter {
             "Яблоко",
     };
 
-    public int[] list_picture = {
+    private int[] list_picture = {
             R.drawable.watermelon,
             R.drawable.banan,
             R.drawable.helikopter,
@@ -126,43 +123,7 @@ public class PagerAdapterLet extends PagerAdapter {
             R.drawable.apple
     };
 
-    public int[] list_background = {
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-            Color.rgb(255, 255, 255),
-    };
-
-    public PagerAdapterLet(Context context) {
+    PagerAdapterLet(Context context) {
         this.context = context;
     }
 
@@ -173,23 +134,22 @@ public class PagerAdapterLet extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return (view == (RelativeLayout) object);
+        return (view == object);
     }
 
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        assert inflater != null;
         View view = inflater.inflate(R.layout.slide, container, false);
-        RelativeLayout layoutslide = view.findViewById(R.id.slideRelativeLayout);
-        ImageView imgletter = (ImageView) view.findViewById(R.id.imgletter);
-        TextView txttitle = (TextView) view.findViewById(R.id.txttitle);
-        ImageView imgobject = (ImageView) view.findViewById(R.id.imgobject);
+        ImageView img_letter = view.findViewById(R.id.img_letter);
+        TextView txt_title = view.findViewById(R.id.txt_title);
+        ImageView img_object = view.findViewById(R.id.img_object);
 
-        layoutslide.setBackgroundColor(list_background[position]);
-        imgletter.setImageResource(list_letter[position]);
-        txttitle.setText(list_title[position]);
-        imgobject.setImageResource(list_picture[position]);
+        img_letter.setImageResource(list_letter[position]);
+        txt_title.setText(list_title[position]);
+        img_object.setImageResource(list_picture[position]);
         container.addView(view);
         return view;
     }

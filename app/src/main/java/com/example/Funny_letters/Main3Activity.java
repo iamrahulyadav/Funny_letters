@@ -6,14 +6,12 @@ import android.os.Bundle;
 import com.example.igortaran.R;
 
 public class Main3Activity extends BaseActivity {
-
     private boolean isNeedStopMusic = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
-
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 

@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Веселые буквы</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="btn_play">Играть</string>
+    <string name="btn_alphabet">Алфавит</string>
+    <string name="btn_rate">Оценить</string>
+    <string name="background_iv">Image background</string>
+    <string name="title_tv">Алфавит</string>
+    <string name="picture">Картинка</string>
+    <string name="tv_title">Title</string>
 </resources>
